@@ -36,6 +36,8 @@ boxes.forEach((box)=>{
 
 const reset_Game = () =>{
  turnO = true;
+ counts = 0
+ iswinner = false
  Enable_Boxes()
  msg_container.classList.add("hide")
 }
@@ -90,6 +92,7 @@ const Checkwinner = () =>{
         if(position_vl1 === position_vl2 && position_vl2 === position_vl3){
             console.log("Winner",position_vl1)
             Show_Winner(position_vl1)
+            return;
         }
       
     }
